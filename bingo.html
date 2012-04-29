@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>bingo</title>
+    <link href="game.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+  	<div align="center">
+    <img src="images/bingo.png" />    
+  	<div id="bingo_setter" align="center">
+  		<div id="start-form">  		
+  		
+  		How Many Cards
+  		<input type="text" id="num_players" name="num_players" style="width:50px;" />&nbsp;&nbsp;&nbsp;&nbsp;
+  		Pattern
+  		<select name="bingo_pattern" id="bingo_pattern">
+  			<option value="C">Letter C</option>
+  			<option value="E">Letter E</option>
+  			<option value="F">Letter F</option>
+  			<option value="N">Letter N</option>
+  			<option value="full">Full House</option>
+  		</select>
+  		<input type="button" id="play" name="play" value="Let's Play Bingo!!!" />
+  		</div>
+  		
+  		<h2>CHOOSE YOUR DESTINY!!!</h2>
+  		<div id="destiny-chooser">
+  		 <ul>
+  		 	<li><img src="images/letter-C.gif" /><br /><span>Letter C</span></li>
+  		 	<li><img src="images/letter-E.gif" /><br /><span>Letter E</span></li>
+  		 	<li><img src="images/letter-F.gif" /><br /><span>Letter F</span></li>
+  		 	<li><img src="images/letter-N.gif" /><br /><span>Letter N</span></li>
+  		 	<li><img src="images/letter-O.gif" /><br /><span>Letter O</span></li>
+  		 	<li><img src="images/full-house.gif" /><br /><span>Full House</span></li>
+  		 </ul>
+  		</div>
+  	</div>
+  	
+    </div>
+    
+    <div id="game_container" style="display:none;">
+    <div style="width:716px; margin:0 auto;">
+    <table style="margin: 0 auto;" id="talk-table" style="display:none; width:716px; margin:0 auto;">
+    	<tr>
+    		<td valign="bottom">
+    			<h3 align="center">I'm your host!</h3>
+    			<!-- First, include the JPEGCam JavaScript Library -->
+    			<img src="images/sad-forever-alone-happy.png" id="avatar" style="display:none; height:240px;" />
+    			<div id="webcam-container" style="">
+				<script type="text/javascript" src="webcam.js"></script>	
+				<!-- Configure a few settings -->
+				<script language="JavaScript">
+					//webcam.set_api_url( 'test.php' );
+					//webcam.set_quality( 90 ); // JPEG quality (1 - 100)
+					//webcam.set_shutter_sound( true ); // play shutter click sound
+				</script>
+				
+				<!-- Next, write the movie to the page at 320x240 -->
+				<script language="JavaScript">
+					document.write( webcam.get_html(320, 240) );
+				</script>
+				</div>
+				<p align="center"><button id="toggle-web">Toggle Webcam or Avatar</button></p>
+    		</td>
+    		<td valign="top">
+    			<div style="background:url(images/bubbles.png); width:360px; height:280px; padding:20px;margin-bottom:20px;">
+    			<h1 id="status" align="center">Let's Play Bingo!!!</h1>
+    			</div>
+    			<div id="draw_button" align="center" style="margin-bottom:10px; display:none;">
+			    <input type="button" id="draw" value="DRAW" style="font-size:32px;"/>
+			    </div>
+    		</td>
+    	</tr>
+    </table>
+    </div>
+    <div id="bingo_board" align="center"><br /><img src="images/ajax-loader.gif" /><br /></div>
+    <div id="bingo_card"><br /><img src="images/ajax-loader.gif" /><br /><br /></div>
+    </div>
+  	<script type="application/dart" src="bingo.dart"></script>
+  	<script src="dart.js"></script>
+  </body>
+</html>

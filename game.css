@@ -1,0 +1,93 @@
+*{
+	font-family:Arial;
+}
+body{
+	background:url(images/button-textured.png);
+}
+
+
+
+/********************* BOARD **********************/
+
+#board_container{
+	padding:10px;
+	margin:0 auto;
+	border-radius:10px;
+	border:#AFAFAF solid thin;
+}
+
+#board_container td{
+	text-align:center;
+	font-size:24px;
+}
+
+/********************* CARD **********************/
+
+#bingo_card{
+	display:table;
+	width:1090px;
+	text-align:center;
+	background:#AAA;
+	margin: 20px auto;
+	border-radius:10px;
+}
+
+.card_container{
+	background:#FFF;
+	float:left;
+	border:#AFAFAF solid thin;
+	padding:10px;
+	margin:10px;
+}
+
+.card-row{
+	float:left;
+}
+
+.card_container ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.card_container ul li{
+	width:40px;
+	font-weight:bold;
+	padding:10px 0px;
+	font-size:14px;
+	margin:2px;
+	text-align:center;
+	border:#777 solid thin;
+}
+
+#free{
+	background:#FF0;
+}
+
+#destiny-chooser ul{
+	display:table;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+#destiny-chooser ul li{
+	float:left;
+	padding:10px;
+}
+
+#destiny-chooser ul li span{
+	font-size:12px;
+	font-weight:bold;
+}
+
+#start-form{
+	color:#FFF;
+	display:table;
+	width:500px;
+	text-align:center;
+	background:#AAA;
+	margin: 20px auto;
+	padding:10px;
+	border-radius:10px;
+}
